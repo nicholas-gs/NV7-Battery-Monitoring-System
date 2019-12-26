@@ -9,8 +9,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
+
+    greenColor = QtGui.QColor(65, 169, 76) 
+    yellowColor = QtGui.QColor(253, 165, 15)
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1031, 631)
@@ -1574,14 +1577,14 @@ class Ui_MainWindow(object):
         self.mod2_28.setDigitCount(2)
         self.mod2_28.setObjectName("mod2_28")
         self.gridLayout_8.addWidget(self.mod2_28, 5, 4, 1, 1)
-        self.mod_25 = QtWidgets.QLCDNumber(self.centralwidget)
-        self.mod_25.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.mod_25.setAutoFillBackground(True)
-        self.mod_25.setFrameShape(QtWidgets.QFrame.Panel)
-        self.mod_25.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.mod_25.setDigitCount(2)
-        self.mod_25.setObjectName("mod_25")
-        self.gridLayout_8.addWidget(self.mod_25, 5, 1, 1, 1)
+        self.mod2_25 = QtWidgets.QLCDNumber(self.centralwidget)
+        self.mod2_25.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.mod2_25.setAutoFillBackground(True)
+        self.mod2_25.setFrameShape(QtWidgets.QFrame.Panel)
+        self.mod2_25.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.mod2_25.setDigitCount(2)
+        self.mod2_25.setObjectName("mod_25")
+        self.gridLayout_8.addWidget(self.mod2_25, 5, 1, 1, 1)
         self.mod2_9 = QtWidgets.QLCDNumber(self.centralwidget)
         self.mod2_9.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.mod2_9.setAutoFillBackground(True)
@@ -1786,12 +1789,2061 @@ class Ui_MainWindow(object):
         self.label_23.setText(_translate("MainWindow", "Module 2"))
         self.label_24.setText(_translate("MainWindow", "Average"))
 
+    def _displayMod0Data(self, tempData, tempAverage):
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        self.mod0_avg.display(tempAverage)
+        palette = self.mod0_avg.palette()
+        palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+        self.mod0_avg.setPalette(palette)
+
+        if(tempData[0] != -1):
+            self.mod0_0.display(tempData[0])
+            palette = self.mod0_0.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_0.setPalette(palette)
+        else:
+            palette = self.mod0_0.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_0.setPalette(palette)
+
+        if(tempData[1] != -1):
+            self.mod0_1.display(tempData[1])
+            palette = self.mod0_1.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_1.setPalette(palette)
+        else:
+            palette = self.mod0_1.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_1.setPalette(palette)
+
+        if(tempData[2] != -1):
+            self.mod0_2.display(tempData[2])
+            palette = self.mod0_2.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_2.setPalette(palette)
+        else:
+            palette = self.mod0_2.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_2.setPalette(palette)
+
+        if(tempData[3] != -1):
+            self.mod0_3.display(tempData[3])
+            palette = self.mod0_3.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_3.setPalette(palette)
+        else:
+            palette = self.mod0_3.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_3.setPalette(palette)
+
+        if(tempData[4] != -1):
+            self.mod0_4.display(tempData[4])
+            palette = self.mod0_4.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_4.setPalette(palette)
+        else:
+            palette = self.mod0_4.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_4.setPalette(palette)
+
+        if(tempData[5] != -1):
+            self.mod0_5.display(tempData[5])
+            palette = self.mod0_5.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_5.setPalette(palette)
+        else:
+            palette = self.mod0_5.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_5.setPalette(palette)
+
+        if(tempData[6] != -1):
+            self.mod0_6.display(tempData[6])
+            palette = self.mod0_6.palette()
+            palette.setColor(palette.Background,
+                             Ui_MainWindow.greenColor)
+            self.mod0_6.setPalette(palette)
+        else:
+            palette = self.mod0_6.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_6.setPalette(palette)
+
+        if(tempData[7] != -1):
+            self.mod0_7.display(tempData[7])
+            palette = self.mod0_7.palette()
+            palette.setColor(palette.Background,
+                             Ui_MainWindow.greenColor)
+            self.mod0_7.setPalette(palette)
+        else:
+            palette = self.mod0_7.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_7.setPalette(palette)
+
+        if(tempData[8] != -1):
+            self.mod0_8.display(tempData[8])
+            palette = self.mod0_8.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_8.setPalette(palette)
+        else:
+            palette = self.mod0_8.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_8.setPalette(palette)
+
+        if(tempData[9] != -1):
+            self.mod0_9.display(tempData[9])
+            palette = self.mod0_9.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_9.setPalette(palette)
+        else:
+            palette = self.mod0_9.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_9.setPalette(palette)
+
+        if(tempData[10] != -1):
+            self.mod0_10.display(tempData[10])
+            palette = self.mod0_10.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_10.setPalette(palette)
+        else:
+            palette = self.mod0_10.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_10.setPalette(palette)
+
+        if(tempData[11] != -1):
+            self.mod0_11.display(tempData[11])
+            palette = self.mod0_11.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_11.setPalette(palette)
+        else:
+            palette = self.mod0_11.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_11.setPalette(palette)
+
+        if(tempData[12] != -1):
+            self.mod0_12.display(tempData[12])
+            palette = self.mod0_12.palette()
+            palette.setColor(palette.Background,
+                             Ui_MainWindow.greenColor)
+            self.mod0_12.setPalette(palette)
+        else:
+            palette = self.mod0_12.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_12.setPalette(palette)
+
+        if(tempData[13] != -1):
+            self.mod0_13.display(tempData[13])
+            palette = self.mod0_13.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_13.setPalette(palette)
+        else:
+            palette = self.mod0_13.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_13.setPalette(palette)
+
+        if(tempData[14] != -1):
+            self.mod0_14.display(tempData[14])
+            palette = self.mod0_14.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_14.setPalette(palette)
+        else:
+            palette = self.mod0_14.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_14.setPalette(palette)
+
+        if(tempData[15] != -1):
+            self.mod0_15.display(tempData[15])
+            palette = self.mod0_15.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_15.setPalette(palette)
+        else:
+            palette = self.mod0_15.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_15.setPalette(palette)
+
+        if(tempData[16] != -1):
+            self.mod0_16.display(tempData[16])
+            palette = self.mod0_16.palette()
+            palette.setColor(palette.Background,
+                             Ui_MainWindow.greenColor)
+            self.mod0_16.setPalette(palette)
+        else:
+            palette = self.mod0_16.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_16.setPalette(palette)
+
+        if(tempData[17] != -1):
+            self.mod0_17.display(tempData[17])
+            palette = self.mod0_17.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_17.setPalette(palette)
+        else:
+            palette = self.mod0_17.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_17.setPalette(palette)
+
+        if(tempData[18] != -1):
+            self.mod0_18.display(tempData[18])
+            palette = self.mod0_18.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_18.setPalette(palette)
+        else:
+            palette = self.mod0_18.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_18.setPalette(palette)
+
+        if(tempData[19] != -1):
+            self.mod0_19.display(tempData[19])
+            palette = self.mod0_19.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_19.setPalette(palette)
+        else:
+            palette = self.mod0_19.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_19.setPalette(palette)
+
+        if(tempData[20] != -1):
+            self.mod0_20.display(tempData[20])
+            palette = self.mod0_20.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_20.setPalette(palette)
+        else:
+            palette = self.mod0_20.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_20.setPalette(palette)
+
+        if(tempData[21] != -1):
+            self.mod0_21.display(tempData[21])
+            palette = self.mod0_21.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_21.setPalette(palette)
+        else:
+            palette = self.mod0_21.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_21.setPalette(palette)
+
+        if(tempData[22] != -1):
+            self.mod0_22.display(tempData[22])
+            palette = self.mod0_22.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_22.setPalette(palette)
+        else:
+            palette = self.mod0_22.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_22.setPalette(palette)
+
+        if(tempData[23] != -1):
+            self.mod0_23.display(tempData[23])
+            palette = self.mod0_23.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_23.setPalette(palette)
+        else:
+            palette = self.mod0_23.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_23.setPalette(palette)
+
+        if(tempData[24] != -1):
+            self.mod0_24.display(tempData[24])
+            palette = self.mod0_24.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_24.setPalette(palette)
+        else:
+            palette = self.mod0_24.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_24.setPalette(palette)
+
+        if(tempData[25] != -1):
+            self.mod0_25.display(tempData[25])
+            palette = self.mod0_25.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_25.setPalette(palette)
+        else:
+            palette = self.mod0_25.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_25.setPalette(palette)
+
+        if(tempData[26] != -1):
+            self.mod0_26.display(tempData[26])
+            palette = self.mod0_26.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_26.setPalette(palette)
+        else:
+            palette = self.mod0_26.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_26.setPalette(palette)
+
+        if(tempData[27] != -1):
+            self.mod0_27.display(tempData[27])
+            palette = self.mod0_27.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_27.setPalette(palette)
+        else:
+            palette = self.mod0_27.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_27.setPalette(palette)
+
+        if(tempData[28] != -1):
+            self.mod0_28.display(tempData[28])
+            palette = self.mod0_28.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_28.setPalette(palette)
+        else:
+            palette = self.mod0_28.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_28.setPalette(palette)
+
+        if(tempData[29] != -1):
+            self.mod0_29.display(tempData[29])
+            palette = self.mod0_29.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_29.setPalette(palette)
+        else:
+            palette = self.mod0_29.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_29.setPalette(palette)
+
+        if(tempData[30] != -1):
+            self.mod0_30.display(tempData[30])
+            palette = self.mod0_30.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_30.setPalette(palette)
+        else:
+            palette = self.mod0_30.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_30.setPalette(palette)
+
+        if(tempData[31] != -1):
+            self.mod0_31.display(tempData[31])
+            palette = self.mod0_31.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod0_31.setPalette(palette)
+        else:
+            palette = self.mod0_31.palette()
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod0_31.setPalette(palette)
+
+    def _displayMod1Data(self, tempData, tempAverage):
+        self.mod1_avg.display(tempAverage)
+        palette = self.mod1_avg.palette()
+        palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+        self.mod1_avg.setPalette(palette)
+
+        if(tempData[0] != -1):
+            self.mod1_0.display(tempData[0])
+            palette = self.mod1_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_0.setPalette(palette)
+        else:
+            palette = self.mod1_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_0.setPalette(palette)
+
+        if(tempData[1] != -1):
+            self.mod1_1.display(tempData[1])
+            palette = self.mod1_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_1.setPalette(palette)
+        else:
+            palette = self.mod1_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_1.setPalette(palette)
+
+        if(tempData[2] != -1):
+            self.mod1_2.display(tempData[2])
+            palette = self.mod1_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_2.setPalette(palette)
+        else:
+            palette = self.mod1_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_2.setPalette(palette)
+
+        if(tempData[3] != -1):
+            self.mod1_3.display(tempData[3])
+            palette = self.mod1_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_3.setPalette(palette)
+        else:
+            palette = self.mod1_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_3.setPalette(palette)
+
+        if(tempData[4] != -1):
+            self.mod1_4.display(tempData[4])
+            palette = self.mod1_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_4.setPalette(palette)
+        else:
+            palette = self.mod1_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_4.setPalette(palette)
+
+        if(tempData[5] != -1):
+            self.mod1_5.display(tempData[5])
+            palette = self.mod1_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_5.setPalette(palette)
+        else:
+            palette = self.mod1_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_5.setPalette(palette)
+
+        if(tempData[6] != -1):
+            self.mod1_6.display(tempData[6])
+            palette = self.mod1_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_6.setPalette(palette)
+        else:
+            palette = self.mod1_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_6.setPalette(palette)
+            
+
+
+        if(tempData[7] != -1):
+            self.mod1_7.display(tempData[7])
+            palette = self.mod1_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_7.setPalette(palette)
+        else:
+            palette = self.mod1_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_7.setPalette(palette)
+            
+
+
+        if(tempData[8] != -1):
+            self.mod1_8.display(tempData[8])
+            palette = self.mod1_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_8.setPalette(palette)
+        else:
+            palette = self.mod1_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_8.setPalette(palette)
+            
+
+
+        if(tempData[9] != -1):
+            self.mod1_9.display(tempData[9])
+            palette = self.mod1_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_9.setPalette(palette)
+        else:
+            palette = self.mod1_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_9.setPalette(palette)
+            
+
+
+        if(tempData[10] != -1):
+            self.mod1_10.display(tempData[10])
+            palette = self.mod1_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_10.setPalette(palette)
+        else:
+            palette = self.mod1_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_10.setPalette(palette)
+            
+
+
+        if(tempData[11] != -1):
+            self.mod1_11.display(tempData[11])
+            palette = self.mod1_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_11.setPalette(palette)
+        else:
+            palette = self.mod1_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_11.setPalette(palette)
+            
+
+
+        if(tempData[12] != -1):
+            self.mod1_12.display(tempData[12])
+            palette = self.mod1_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_12.setPalette(palette)
+        else:
+            palette = self.mod1_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_12.setPalette(palette)
+            
+
+
+        if(tempData[13] != -1):
+            self.mod1_13.display(tempData[13])
+            palette = self.mod1_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_13.setPalette(palette)
+        else:
+            palette = self.mod1_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_13.setPalette(palette)
+            
+
+
+        if(tempData[14] != -1):
+            self.mod1_14.display(tempData[14])
+            palette = self.mod1_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_14.setPalette(palette)
+        else:
+            palette = self.mod1_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_14.setPalette(palette)
+            
+
+
+        if(tempData[15] != -1):
+            self.mod1_15.display(tempData[15])
+            palette = self.mod1_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_15.setPalette(palette)
+        else:
+            palette = self.mod1_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_15.setPalette(palette)
+            
+
+
+        if(tempData[16] != -1):
+            self.mod1_16.display(tempData[16])
+            palette = self.mod1_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_16.setPalette(palette)
+        else:
+            palette = self.mod1_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_16.setPalette(palette)
+            
+
+
+        if(tempData[17] != -1):
+            self.mod1_17.display(tempData[17])
+            palette = self.mod1_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_17.setPalette(palette)
+        else:
+            palette = self.mod1_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_17.setPalette(palette)
+            
+
+
+        if(tempData[18] != -1):
+            self.mod1_18.display(tempData[18])
+            palette = self.mod1_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_18.setPalette(palette)
+        else:
+            palette = self.mod1_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_18.setPalette(palette)
+            
+
+
+        if(tempData[19] != -1):
+            self.mod1_19.display(tempData[19])
+            palette = self.mod1_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_19.setPalette(palette)
+        else:
+            palette = self.mod1_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_19.setPalette(palette)
+            
+
+
+        if(tempData[20] != -1):
+            self.mod1_20.display(tempData[20])
+            palette = self.mod1_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_20.setPalette(palette)
+        else:
+            palette = self.mod1_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_20.setPalette(palette)
+            
+
+
+        if(tempData[21] != -1):
+            self.mod1_21.display(tempData[21])
+            palette = self.mod1_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_21.setPalette(palette)
+        else:
+            palette = self.mod1_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_21.setPalette(palette)
+            
+
+
+        if(tempData[22] != -1):
+            self.mod1_22.display(tempData[22])
+            palette = self.mod1_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_22.setPalette(palette)
+        else:
+            palette = self.mod1_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_22.setPalette(palette)
+            
+
+
+        if(tempData[23] != -1):
+            self.mod1_23.display(tempData[23])
+            palette = self.mod1_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_23.setPalette(palette)
+        else:
+            palette = self.mod1_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_23.setPalette(palette)
+
+        if(tempData[24] != -1):
+            self.mod1_24.display(tempData[24])
+            palette = self.mod1_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_24.setPalette(palette)
+        else:
+            palette = self.mod1_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_24.setPalette(palette)
+
+        if(tempData[25] != -1):
+            self.mod1_25.display(tempData[25])
+            palette = self.mod1_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_25.setPalette(palette)
+        else:
+            palette = self.mod1_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_25.setPalette(palette)
+            
+
+
+        if(tempData[26] != -1):
+            self.mod1_26.display(tempData[26])
+            palette = self.mod1_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_26.setPalette(palette)
+        else:
+            palette = self.mod1_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_26.setPalette(palette)
+            
+
+
+        if(tempData[27] != -1):
+            self.mod1_27.display(tempData[27])
+            palette = self.mod1_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_27.setPalette(palette)
+        else:
+            palette = self.mod1_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_27.setPalette(palette)
+            
+
+
+        if(tempData[28] != -1):
+            self.mod1_28.display(tempData[28])
+            palette = self.mod1_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_28.setPalette(palette)
+        else:
+            palette = self.mod1_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_28.setPalette(palette)
+            
+
+
+        if(tempData[29] != -1):
+            self.mod1_29.display(tempData[29])
+            palette = self.mod1_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_29.setPalette(palette)
+        else:
+            palette = self.mod1_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_29.setPalette(palette)
+            
+
+
+        if(tempData[30] != -1):
+            self.mod1_30.display(tempData[30])
+            palette = self.mod1_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_30.setPalette(palette)
+        else:
+            palette = self.mod1_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_30.setPalette(palette)
+            
+
+
+        if(tempData[31] != -1):
+            self.mod1_31.display(tempData[31])
+            palette = self.mod1_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod1_31.setPalette(palette)
+        else:
+            palette = self.mod1_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod1_31.setPalette(palette)
+
+    def _displayMod2Data(self, tempData, tempAverage):
+        self.mod2_avg.display(tempAverage)
+        palette = self.mod2_avg.palette()
+        palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+        self.mod2_avg.setPalette(palette)
+
+        if(tempData[0] != -1):
+            self.mod2_0.display(tempData[0])
+            palette = self.mod2_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_0.setPalette(palette)
+        else:
+            palette = self.mod2_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_0.setPalette(palette)
+
+        if(tempData[1] != -1):
+            self.mod2_1.display(tempData[1])
+            palette = self.mod2_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_1.setPalette(palette)
+        else:
+            palette = self.mod2_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_1.setPalette(palette)
+            
+
+
+        if(tempData[2] != -1):
+            self.mod2_2.display(tempData[2])
+            palette = self.mod2_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_2.setPalette(palette)
+        else:
+            palette = self.mod2_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_2.setPalette(palette)
+            
+
+
+        if(tempData[3] != -1):
+            self.mod2_3.display(tempData[3])
+            palette = self.mod2_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_3.setPalette(palette)
+        else:
+            palette = self.mod2_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_3.setPalette(palette)
+            
+
+
+        if(tempData[4] != -1):
+            self.mod2_4.display(tempData[4])
+            palette = self.mod2_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_4.setPalette(palette)
+        else:
+            palette = self.mod2_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_4.setPalette(palette)
+            
+
+
+        if(tempData[5] != -1):
+            self.mod2_5.display(tempData[5])
+            palette = self.mod2_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_5.setPalette(palette)
+        else:
+            palette = self.mod2_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_5.setPalette(palette)
+            
+
+
+        if(tempData[6] != -1):
+            self.mod2_6.display(tempData[6])
+            palette = self.mod2_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_6.setPalette(palette)
+        else:
+            palette = self.mod2_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_6.setPalette(palette)
+            
+
+
+        if(tempData[7] != -1):
+            self.mod2_7.display(tempData[7])
+            palette = self.mod2_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_7.setPalette(palette)
+        else:
+            palette = self.mod2_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_7.setPalette(palette)
+            
+
+
+        if(tempData[8] != -1):
+            self.mod2_8.display(tempData[8])
+            palette = self.mod2_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_8.setPalette(palette)
+        else:
+            palette = self.mod2_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_8.setPalette(palette)
+            
+
+
+        if(tempData[9] != -1):
+            self.mod2_9.display(tempData[9])
+            palette = self.mod2_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_9.setPalette(palette)
+        else:
+            palette = self.mod2_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_9.setPalette(palette)
+            
+
+
+        if(tempData[10] != -1):
+            self.mod2_10.display(tempData[10])
+            palette = self.mod2_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_10.setPalette(palette)
+        else:
+            palette = self.mod2_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_10.setPalette(palette)
+            
+
+
+        if(tempData[11] != -1):
+            self.mod2_11.display(tempData[11])
+            palette = self.mod2_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_11.setPalette(palette)
+        else:
+            palette = self.mod2_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_11.setPalette(palette)
+            
+
+
+        if(tempData[12] != -1):
+            self.mod2_12.display(tempData[12])
+            palette = self.mod2_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_12.setPalette(palette)
+        else:
+            palette = self.mod2_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_12.setPalette(palette)
+            
+
+
+        if(tempData[13] != -1):
+            self.mod2_13.display(tempData[13])
+            palette = self.mod2_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_13.setPalette(palette)
+        else:
+            palette = self.mod2_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_13.setPalette(palette)
+            
+
+
+        if(tempData[14] != -1):
+            self.mod2_14.display(tempData[14])
+            palette = self.mod2_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_14.setPalette(palette)
+        else:
+            palette = self.mod2_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_14.setPalette(palette)
+            
+
+
+        if(tempData[15] != -1):
+            self.mod2_15.display(tempData[15])
+            palette = self.mod2_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_15.setPalette(palette)
+        else:
+            palette = self.mod2_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_15.setPalette(palette)
+            
+
+
+        if(tempData[16] != -1):
+            self.mod2_16.display(tempData[16])
+            palette = self.mod2_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_16.setPalette(palette)
+        else:
+            palette = self.mod2_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_16.setPalette(palette)
+            
+
+
+        if(tempData[17] != -1):
+            self.mod2_17.display(tempData[17])
+            palette = self.mod2_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_17.setPalette(palette)
+        else:
+            palette = self.mod2_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_17.setPalette(palette)
+            
+
+
+        if(tempData[18] != -1):
+            self.mod2_18.display(tempData[18])
+            palette = self.mod2_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_18.setPalette(palette)
+        else:
+            palette = self.mod2_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_18.setPalette(palette)
+            
+
+
+        if(tempData[19] != -1):
+            self.mod2_19.display(tempData[19])
+            palette = self.mod2_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_19.setPalette(palette)
+        else:
+            palette = self.mod2_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_19.setPalette(palette)
+            
+
+
+        if(tempData[20] != -1):
+            self.mod2_20.display(tempData[20])
+            palette = self.mod2_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_20.setPalette(palette)
+        else:
+            palette = self.mod2_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_20.setPalette(palette)
+            
+
+
+        if(tempData[21] != -1):
+            self.mod2_21.display(tempData[21])
+            palette = self.mod2_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_21.setPalette(palette)
+        else:
+            palette = self.mod2_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_21.setPalette(palette)
+            
+
+
+        if(tempData[22] != -1):
+            self.mod2_22.display(tempData[22])
+            palette = self.mod2_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_22.setPalette(palette)
+        else:
+            palette = self.mod2_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_22.setPalette(palette)
+            
+
+
+        if(tempData[23] != -1):
+            self.mod2_23.display(tempData[23])
+            palette = self.mod2_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_23.setPalette(palette)
+        else:
+            palette = self.mod2_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_23.setPalette(palette)
+            
+
+
+        if(tempData[24] != -1):
+            self.mod2_24.display(tempData[24])
+            palette = self.mod2_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_24.setPalette(palette)
+        else:
+            palette = self.mod2_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_24.setPalette(palette)
+            
+
+
+        if(tempData[25] != -1):
+            self.mod2_25.display(tempData[25])
+            palette = self.mod2_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_25.setPalette(palette)
+        else:
+            palette = self.mod2_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_25.setPalette(palette)
+            
+
+
+        if(tempData[26] != -1):
+            self.mod2_26.display(tempData[26])
+            palette = self.mod2_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_26.setPalette(palette)
+        else:
+            palette = self.mod2_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_26.setPalette(palette)
+            
+
+
+        if(tempData[27] != -1):
+            self.mod2_27.display(tempData[27])
+            palette = self.mod2_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_27.setPalette(palette)
+        else:
+            palette = self.mod2_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_27.setPalette(palette)
+            
+        if(tempData[28] != -1):
+            self.mod2_28.display(tempData[28])
+            palette = self.mod2_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_28.setPalette(palette)
+        else:
+            palette = self.mod2_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_28.setPalette(palette)
+
+        if(tempData[29] != -1):
+            self.mod2_29.display(tempData[29])
+            palette = self.mod2_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_29.setPalette(palette)
+        else:
+            palette = self.mod2_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_29.setPalette(palette)
+            
+        if(tempData[30] != -1):
+            self.mod2_30.display(tempData[30])
+            palette = self.mod2_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_30.setPalette(palette)
+        else:
+            palette = self.mod2_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_30.setPalette(palette)
+
+        if(tempData[31] != -1):
+            self.mod2_31.display(tempData[31])
+            palette = self.mod2_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod2_31.setPalette(palette)
+        else:
+            palette = self.mod2_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod2_31.setPalette(palette)
+
+    def _displayMod3Data(self, tempData, tempAverage):
+        self.mod3_avg.display(tempAverage)
+        palette = self.mod3_avg.palette()
+        palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+        self.mod3_avg.setPalette(palette)
+
+        if(tempData[0] != -1):
+            self.mod3_0.display(tempData[0])
+            palette = self.mod3_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_0.setPalette(palette)
+        else:
+            palette = self.mod3_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_0.setPalette(palette)
+            
+        if(tempData[1] != -1):
+            self.mod3_1.display(tempData[1])
+            palette = self.mod3_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_1.setPalette(palette)
+        else:
+            palette = self.mod3_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_1.setPalette(palette)
+            
+        if(tempData[2] != -1):
+            self.mod3_2.display(tempData[2])
+            palette = self.mod3_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_2.setPalette(palette)
+        else:
+            palette = self.mod3_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_2.setPalette(palette)
+            
+        if(tempData[3] != -1):
+            self.mod3_3.display(tempData[3])
+            palette = self.mod3_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_3.setPalette(palette)
+        else:
+            palette = self.mod3_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_3.setPalette(palette)
+            
+        if(tempData[4] != -1):
+            self.mod3_4.display(tempData[4])
+            palette = self.mod3_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_4.setPalette(palette)
+        else:
+            palette = self.mod3_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_4.setPalette(palette)
+            
+        if(tempData[5] != -1):
+            self.mod3_5.display(tempData[5])
+            palette = self.mod3_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_5.setPalette(palette)
+        else:
+            palette = self.mod3_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_5.setPalette(palette)
+            
+        if(tempData[6] != -1):
+            self.mod3_6.display(tempData[6])
+            palette = self.mod3_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_6.setPalette(palette)
+        else:
+            palette = self.mod3_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_6.setPalette(palette)
+            
+        if(tempData[7] != -1):
+            self.mod3_7.display(tempData[7])
+            palette = self.mod3_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_7.setPalette(palette)
+        else:
+            palette = self.mod3_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_7.setPalette(palette)
+            
+        if(tempData[8] != -1):
+            self.mod3_8.display(tempData[8])
+            palette = self.mod3_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_8.setPalette(palette)
+        else:
+            palette = self.mod3_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_8.setPalette(palette)
+            
+        if(tempData[9] != -1):
+            self.mod3_9.display(tempData[9])
+            palette = self.mod3_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_9.setPalette(palette)
+        else:
+            palette = self.mod3_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_9.setPalette(palette)
+            
+        if(tempData[10] != -1):
+            self.mod3_10.display(tempData[10])
+            palette = self.mod3_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_10.setPalette(palette)
+        else:
+            palette = self.mod3_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_10.setPalette(palette)
+            
+        if(tempData[11] != -1):
+            self.mod3_11.display(tempData[11])
+            palette = self.mod3_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_11.setPalette(palette)
+        else:
+            palette = self.mod3_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_11.setPalette(palette)
+            
+        if(tempData[12] != -1):
+            self.mod3_12.display(tempData[12])
+            palette = self.mod3_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_12.setPalette(palette)
+        else:
+            palette = self.mod3_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_12.setPalette(palette)
+            
+        if(tempData[13] != -1):
+            self.mod3_13.display(tempData[13])
+            palette = self.mod3_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_13.setPalette(palette)
+        else:
+            palette = self.mod3_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_13.setPalette(palette)
+            
+        if(tempData[14] != -1):
+            self.mod3_14.display(tempData[14])
+            palette = self.mod3_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_14.setPalette(palette)
+        else:
+            palette = self.mod3_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_14.setPalette(palette)
+            
+        if(tempData[15] != -1):
+            self.mod3_15.display(tempData[15])
+            palette = self.mod3_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_15.setPalette(palette)
+        else:
+            palette = self.mod3_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_15.setPalette(palette)
+            
+        if(tempData[16] != -1):
+            self.mod3_16.display(tempData[16])
+            palette = self.mod3_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_16.setPalette(palette)
+        else:
+            palette = self.mod3_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_16.setPalette(palette)
+            
+        if(tempData[17] != -1):
+            self.mod3_17.display(tempData[17])
+            palette = self.mod3_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_17.setPalette(palette)
+        else:
+            palette = self.mod3_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_17.setPalette(palette)
+            
+        if(tempData[18] != -1):
+            self.mod3_18.display(tempData[18])
+            palette = self.mod3_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_18.setPalette(palette)
+        else:
+            palette = self.mod3_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_18.setPalette(palette)
+            
+        if(tempData[19] != -1):
+            self.mod3_19.display(tempData[19])
+            palette = self.mod3_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_19.setPalette(palette)
+        else:
+            palette = self.mod3_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_19.setPalette(palette)
+            
+        if(tempData[20] != -1):
+            self.mod3_20.display(tempData[20])
+            palette = self.mod3_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_20.setPalette(palette)
+        else:
+            palette = self.mod3_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_20.setPalette(palette)
+            
+        if(tempData[21] != -1):
+            self.mod3_21.display(tempData[21])
+            palette = self.mod3_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_21.setPalette(palette)
+        else:
+            palette = self.mod3_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_21.setPalette(palette)
+            
+        if(tempData[22] != -1):
+            self.mod3_22.display(tempData[22])
+            palette = self.mod3_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_22.setPalette(palette)
+        else:
+            palette = self.mod3_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_22.setPalette(palette)
+            
+        if(tempData[23] != -1):
+            self.mod3_23.display(tempData[23])
+            palette = self.mod3_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_23.setPalette(palette)
+        else:
+            palette = self.mod3_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_23.setPalette(palette)
+            
+        if(tempData[24] != -1):
+            self.mod3_24.display(tempData[24])
+            palette = self.mod3_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_24.setPalette(palette)
+        else:
+            palette = self.mod3_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_24.setPalette(palette)
+            
+        if(tempData[25] != -1):
+            self.mod3_25.display(tempData[25])
+            palette = self.mod3_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_25.setPalette(palette)
+        else:
+            palette = self.mod3_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_25.setPalette(palette)
+            
+        if(tempData[26] != -1):
+            self.mod3_26.display(tempData[26])
+            palette = self.mod3_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_26.setPalette(palette)
+        else:
+            palette = self.mod3_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_26.setPalette(palette)
+            
+        if(tempData[27] != -1):
+            self.mod3_27.display(tempData[27])
+            palette = self.mod3_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_27.setPalette(palette)
+        else:
+            palette = self.mod3_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_27.setPalette(palette)
+            
+        if(tempData[28] != -1):
+            self.mod3_28.display(tempData[28])
+            palette = self.mod3_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_28.setPalette(palette)
+        else:
+            palette = self.mod3_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_28.setPalette(palette)
+            
+        if(tempData[29] != -1):
+            self.mod3_29.display(tempData[29])
+            palette = self.mod3_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_29.setPalette(palette)
+        else:
+            palette = self.mod3_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_29.setPalette(palette)
+            
+        if(tempData[30] != -1):
+            self.mod3_30.display(tempData[30])
+            palette = self.mod3_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_30.setPalette(palette)
+        else:
+            palette = self.mod3_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_30.setPalette(palette)
+            
+        if(tempData[31] != -1):
+            self.mod3_31.display(tempData[31])
+            palette = self.mod3_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod3_31.setPalette(palette)
+        else:
+            palette = self.mod3_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod3_31.setPalette(palette)
+
+    def _displayMod4Data(self, tempData, tempAverage):
+        self.mod4_avg.display(tempAverage)
+        palette = self.mod4_avg.palette()
+        palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+        self.mod4_avg.setPalette(palette)
+
+        if(tempData[0] != -1):
+            self.mod4_0.display(tempData[0])
+            palette = self.mod4_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_0.setPalette(palette)
+        else:
+            palette = self.mod4_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_0.setPalette(palette)
+            
+        if(tempData[1] != -1):
+            self.mod4_1.display(tempData[1])
+            palette = self.mod4_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_1.setPalette(palette)
+        else:
+            palette = self.mod4_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_1.setPalette(palette)
+            
+        if(tempData[2] != -1):
+            self.mod4_2.display(tempData[2])
+            palette = self.mod4_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_2.setPalette(palette)
+        else:
+            palette = self.mod4_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_2.setPalette(palette)
+            
+        if(tempData[3] != -1):
+            self.mod4_3.display(tempData[3])
+            palette = self.mod4_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_3.setPalette(palette)
+        else:
+            palette = self.mod4_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_3.setPalette(palette)
+            
+        if(tempData[4] != -1):
+            self.mod4_4.display(tempData[4])
+            palette = self.mod4_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_4.setPalette(palette)
+        else:
+            palette = self.mod4_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_4.setPalette(palette)
+            
+        if(tempData[5] != -1):
+            self.mod4_5.display(tempData[5])
+            palette = self.mod4_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_5.setPalette(palette)
+        else:
+            palette = self.mod4_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_5.setPalette(palette)
+            
+        if(tempData[6] != -1):
+            self.mod4_6.display(tempData[6])
+            palette = self.mod4_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_6.setPalette(palette)
+        else:
+            palette = self.mod4_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_6.setPalette(palette)
+            
+        if(tempData[7] != -1):
+            self.mod4_7.display(tempData[7])
+            palette = self.mod4_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_7.setPalette(palette)
+        else:
+            palette = self.mod4_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_7.setPalette(palette)
+            
+        if(tempData[8] != -1):
+            self.mod4_8.display(tempData[8])
+            palette = self.mod4_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_8.setPalette(palette)
+        else:
+            palette = self.mod4_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_8.setPalette(palette)
+            
+        if(tempData[9] != -1):
+            self.mod4_9.display(tempData[9])
+            palette = self.mod4_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_9.setPalette(palette)
+        else:
+            palette = self.mod4_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_9.setPalette(palette)
+            
+        if(tempData[10] != -1):
+            self.mod4_10.display(tempData[10])
+            palette = self.mod4_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_10.setPalette(palette)
+        else:
+            palette = self.mod4_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_10.setPalette(palette)
+            
+        if(tempData[11] != -1):
+            self.mod4_11.display(tempData[11])
+            palette = self.mod4_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_11.setPalette(palette)
+        else:
+            palette = self.mod4_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_11.setPalette(palette)
+            
+        if(tempData[12] != -1):
+            self.mod4_12.display(tempData[12])
+            palette = self.mod4_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_12.setPalette(palette)
+        else:
+            palette = self.mod4_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_12.setPalette(palette)
+            
+        if(tempData[13] != -1):
+            self.mod4_13.display(tempData[13])
+            palette = self.mod4_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_13.setPalette(palette)
+        else:
+            palette = self.mod4_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_13.setPalette(palette)
+            
+        if(tempData[14] != -1):
+            self.mod4_14.display(tempData[14])
+            palette = self.mod4_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_14.setPalette(palette)
+        else:
+            palette = self.mod4_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_14.setPalette(palette)
+            
+        if(tempData[15] != -1):
+            self.mod4_15.display(tempData[15])
+            palette = self.mod4_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_15.setPalette(palette)
+        else:
+            palette = self.mod4_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_15.setPalette(palette)
+            
+        if(tempData[16] != -1):
+            self.mod4_16.display(tempData[16])
+            palette = self.mod4_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_16.setPalette(palette)
+        else:
+            palette = self.mod4_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_16.setPalette(palette)
+            
+        if(tempData[17] != -1):
+            self.mod4_17.display(tempData[17])
+            palette = self.mod4_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_17.setPalette(palette)
+        else:
+            palette = self.mod4_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_17.setPalette(palette)
+            
+        if(tempData[18] != -1):
+            self.mod4_18.display(tempData[18])
+            palette = self.mod4_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_18.setPalette(palette)
+        else:
+            palette = self.mod4_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_18.setPalette(palette)
+            
+        if(tempData[19] != -1):
+            self.mod4_19.display(tempData[19])
+            palette = self.mod4_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_19.setPalette(palette)
+        else:
+            palette = self.mod4_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_19.setPalette(palette)
+            
+        if(tempData[20] != -1):
+            self.mod4_20.display(tempData[20])
+            palette = self.mod4_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_20.setPalette(palette)
+        else:
+            palette = self.mod4_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_20.setPalette(palette)
+            
+        if(tempData[21] != -1):
+            self.mod4_21.display(tempData[21])
+            palette = self.mod4_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_21.setPalette(palette)
+        else:
+            palette = self.mod4_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_21.setPalette(palette)
+            
+        if(tempData[22] != -1):
+            self.mod4_22.display(tempData[22])
+            palette = self.mod4_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_22.setPalette(palette)
+        else:
+            palette = self.mod4_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_22.setPalette(palette)
+            
+        if(tempData[23] != -1):
+            self.mod4_23.display(tempData[23])
+            palette = self.mod4_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_23.setPalette(palette)
+        else:
+            palette = self.mod4_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_23.setPalette(palette)
+            
+        if(tempData[24] != -1):
+            self.mod4_24.display(tempData[24])
+            palette = self.mod4_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_24.setPalette(palette)
+        else:
+            palette = self.mod4_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_24.setPalette(palette)
+            
+        if(tempData[25] != -1):
+            self.mod4_25.display(tempData[25])
+            palette = self.mod4_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_25.setPalette(palette)
+        else:
+            palette = self.mod4_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_25.setPalette(palette)
+            
+        if(tempData[26] != -1):
+            self.mod4_26.display(tempData[26])
+            palette = self.mod4_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_26.setPalette(palette)
+        else:
+            palette = self.mod4_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_26.setPalette(palette)
+            
+        if(tempData[27] != -1):
+            self.mod4_27.display(tempData[27])
+            palette = self.mod4_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_27.setPalette(palette)
+        else:
+            palette = self.mod4_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_27.setPalette(palette)
+            
+        if(tempData[28] != -1):
+            self.mod4_28.display(tempData[28])
+            palette = self.mod4_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_28.setPalette(palette)
+        else:
+            palette = self.mod4_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_28.setPalette(palette)
+            
+        if(tempData[29] != -1):
+            self.mod4_29.display(tempData[29])
+            palette = self.mod4_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_29.setPalette(palette)
+        else:
+            palette = self.mod4_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_29.setPalette(palette)
+            
+        if(tempData[30] != -1):
+            self.mod4_30.display(tempData[30])
+            palette = self.mod4_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_30.setPalette(palette)
+        else:
+            palette = self.mod4_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_30.setPalette(palette)
+            
+        if(tempData[31] != -1):
+            self.mod4_31.display(tempData[31])
+            palette = self.mod4_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod4_31.setPalette(palette)
+        else:
+            palette = self.mod4_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod4_31.setPalette(palette)
+
+    def _displayMod5Data(self, tempData, tempAverage):
+        self.mod5_avg.display(tempAverage)
+        palette = self.mod5_avg.palette()
+        palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+        self.mod5_avg.setPalette(palette)
+
+        if(tempData[0] != -1):
+            self.mod5_0.display(tempData[0])
+            palette = self.mod5_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_0.setPalette(palette)
+        else:
+            palette = self.mod5_0.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_0.setPalette(palette)
+            
+        if(tempData[1] != -1):
+            self.mod5_1.display(tempData[1])
+            palette = self.mod5_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_1.setPalette(palette)
+        else:
+            palette = self.mod5_1.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_1.setPalette(palette)
+            
+        if(tempData[2] != -1):
+            self.mod5_2.display(tempData[2])
+            palette = self.mod5_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_2.setPalette(palette)
+        else:
+            palette = self.mod5_2.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_2.setPalette(palette)
+            
+        if(tempData[3] != -1):
+            self.mod5_3.display(tempData[3])
+            palette = self.mod5_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_3.setPalette(palette)
+        else:
+            palette = self.mod5_3.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_3.setPalette(palette)
+            
+        if(tempData[4] != -1):
+            self.mod5_4.display(tempData[4])
+            palette = self.mod5_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_4.setPalette(palette)
+        else:
+            palette = self.mod5_4.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_4.setPalette(palette)
+            
+        if(tempData[5] != -1):
+            self.mod5_5.display(tempData[5])
+            palette = self.mod5_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_5.setPalette(palette)
+        else:
+            palette = self.mod5_5.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_5.setPalette(palette)
+            
+        if(tempData[6] != -1):
+            self.mod5_6.display(tempData[6])
+            palette = self.mod5_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_6.setPalette(palette)
+        else:
+            palette = self.mod5_6.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_6.setPalette(palette)
+            
+        if(tempData[7] != -1):
+            self.mod5_7.display(tempData[7])
+            palette = self.mod5_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_7.setPalette(palette)
+        else:
+            palette = self.mod5_7.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_7.setPalette(palette)
+            
+        if(tempData[8] != -1):
+            self.mod5_8.display(tempData[8])
+            palette = self.mod5_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_8.setPalette(palette)
+        else:
+            palette = self.mod5_8.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_8.setPalette(palette)
+            
+        if(tempData[9] != -1):
+            self.mod5_9.display(tempData[9])
+            palette = self.mod5_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_9.setPalette(palette)
+        else:
+            palette = self.mod5_9.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_9.setPalette(palette)
+            
+        if(tempData[10] != -1):
+            self.mod5_10.display(tempData[10])
+            palette = self.mod5_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_10.setPalette(palette)
+        else:
+            palette = self.mod5_10.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_10.setPalette(palette)
+            
+        if(tempData[11] != -1):
+            self.mod5_11.display(tempData[11])
+            palette = self.mod5_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_11.setPalette(palette)
+        else:
+            palette = self.mod5_11.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_11.setPalette(palette)
+            
+        if(tempData[12] != -1):
+            self.mod5_12.display(tempData[12])
+            palette = self.mod5_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_12.setPalette(palette)
+        else:
+            palette = self.mod5_12.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_12.setPalette(palette)
+            
+        if(tempData[13] != -1):
+            self.mod5_13.display(tempData[13])
+            palette = self.mod5_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_13.setPalette(palette)
+        else:
+            palette = self.mod5_13.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_13.setPalette(palette)
+            
+        if(tempData[14] != -1):
+            self.mod5_14.display(tempData[14])
+            palette = self.mod5_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_14.setPalette(palette)
+        else:
+            palette = self.mod5_14.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_14.setPalette(palette)
+            
+        if(tempData[15] != -1):
+            self.mod5_15.display(tempData[15])
+            palette = self.mod5_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_15.setPalette(palette)
+        else:
+            palette = self.mod5_15.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_15.setPalette(palette)
+            
+        if(tempData[16] != -1):
+            self.mod5_16.display(tempData[16])
+            palette = self.mod5_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_16.setPalette(palette)
+        else:
+            palette = self.mod5_16.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_16.setPalette(palette)
+            
+        if(tempData[17] != -1):
+            self.mod5_17.display(tempData[17])
+            palette = self.mod5_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_17.setPalette(palette)
+        else:
+            palette = self.mod5_17.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_17.setPalette(palette)
+            
+        if(tempData[18] != -1):
+            self.mod5_18.display(tempData[18])
+            palette = self.mod5_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_18.setPalette(palette)
+        else:
+            palette = self.mod5_18.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_18.setPalette(palette)
+            
+        if(tempData[19] != -1):
+            self.mod5_19.display(tempData[19])
+            palette = self.mod5_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_19.setPalette(palette)
+        else:
+            palette = self.mod5_19.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_19.setPalette(palette)
+            
+        if(tempData[20] != -1):
+            self.mod5_20.display(tempData[20])
+            palette = self.mod5_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_20.setPalette(palette)
+        else:
+            palette = self.mod5_20.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_20.setPalette(palette)
+            
+        if(tempData[21] != -1):
+            self.mod5_21.display(tempData[21])
+            palette = self.mod5_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_21.setPalette(palette)
+        else:
+            palette = self.mod5_21.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_21.setPalette(palette)
+            
+        if(tempData[22] != -1):
+            self.mod5_22.display(tempData[22])
+            palette = self.mod5_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_22.setPalette(palette)
+        else:
+            palette = self.mod5_22.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_22.setPalette(palette)
+            
+        if(tempData[23] != -1):
+            self.mod5_23.display(tempData[23])
+            palette = self.mod5_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_23.setPalette(palette)
+        else:
+            palette = self.mod5_23.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_23.setPalette(palette)
+            
+        if(tempData[24] != -1):
+            self.mod5_24.display(tempData[24])
+            palette = self.mod5_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_24.setPalette(palette)
+        else:
+            palette = self.mod5_24.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_24.setPalette(palette)
+            
+        if(tempData[25] != -1):
+            self.mod5_25.display(tempData[25])
+            palette = self.mod5_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_25.setPalette(palette)
+        else:
+            palette = self.mod5_25.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_25.setPalette(palette)
+            
+        if(tempData[26] != -1):
+            self.mod5_26.display(tempData[26])
+            palette = self.mod5_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_26.setPalette(palette)
+        else:
+            palette = self.mod5_26.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_26.setPalette(palette)
+            
+        if(tempData[27] != -1):
+            self.mod5_27.display(tempData[27])
+            palette = self.mod5_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_27.setPalette(palette)
+        else:
+            palette = self.mod5_27.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_27.setPalette(palette)
+            
+        if(tempData[28] != -1):
+            self.mod5_28.display(tempData[28])
+            palette = self.mod5_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_28.setPalette(palette)
+        else:
+            palette = self.mod5_28.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_28.setPalette(palette)
+            
+        if(tempData[29] != -1):
+            self.mod5_29.display(tempData[29])
+            palette = self.mod5_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_29.setPalette(palette)
+        else:
+            palette = self.mod5_29.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_29.setPalette(palette)
+            
+        if(tempData[30] != -1):
+            self.mod5_30.display(tempData[30])
+            palette = self.mod5_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_30.setPalette(palette)
+        else:
+            palette = self.mod5_30.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_30.setPalette(palette)
+            
+        if(tempData[31] != -1):
+            self.mod5_31.display(tempData[31])
+            palette = self.mod5_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.greenColor)
+            self.mod5_31.setPalette(palette)
+        else:
+            palette = self.mod5_31.palette()      
+            palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
+            self.mod5_31.setPalette(palette)
