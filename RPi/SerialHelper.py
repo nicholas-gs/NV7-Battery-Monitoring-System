@@ -19,7 +19,7 @@ class ComPort(QThread):
                 try:
                     # self.serArduino = serial.Serial("/dev/ttyACM0",9600,timeout=1)     # Raspberry Pi
                     self.ser = serial.Serial(
-                        "COM3", 9600)                               # PC
+                        "COM4", 9600)                               # PC - Change Com Port as necessary
                 except:
                     print("Cannot find COM Port")
 

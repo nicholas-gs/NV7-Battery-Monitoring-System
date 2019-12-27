@@ -53,11 +53,3 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             return -1
         else:
             return ((int)(sum/i))
-
-
-if __name__ == "__main__":
-
-    app = QApplication(sys.argv)
-    ui = MainWindow()
-    ui.show()
-    sys.exit(app.exec_())
