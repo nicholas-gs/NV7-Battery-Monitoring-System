@@ -10,6 +10,7 @@ from threading import Event
 
 from MainWindow_ui import Ui_MainWindow
 from SerialHelper import ComPort
+from ui_elements import ValidTemps
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -23,7 +24,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     # Update the UI with the new temperature data
     def updateUI(self, moduleID,  tempData):
-        self.displayData(moduleID, tempData, self.calculateAvg(tempData))
+        self.displayData(moduleID, tempData,
+                         self.calculateAvg(moduleID, tempData))
 
     def displayData(self, moduleID, tempData, tempAverage):
         if(moduleID == 0):
@@ -40,14 +42,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self._displayMod5Data(tempData, tempAverage)
 
     # Calculate the average temp
-    def calculateAvg(self, tempData):
-        i = 0
+    def calculateAvg(self, moduleID, tempData):
+        i = 0  # Number of valid temperatures
+        counter = 0
         sum = 0
 
         for temp in tempData:
-            if(temp != -1):
+            if(temp != -1 and ValidTemps.validSensors[moduleID][counter]):
                 sum += temp
                 i += 1
+            counter += 1
 
         if(i == 0):
             return -1
