@@ -11,8 +11,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
 
-    greenColor = QtGui.QColor(65, 169, 76) 
-    yellowColor = QtGui.QColor(253, 165, 15)
+    greenColor = QtGui.QColor(65, 169, 76) # Color indicates sensor is declared functioning and currently displaying the LATEST UP-TO-DATE temperature reading
+    yellowColor = QtGui.QColor(253, 165, 15) # Color indicates that the reading is NOT up-to-date; New readings for the module did not include data for that sensor
+    redColor = QtGui.QColor(202,0, 42) # Color indicates that the sensor has been declared as NOT FUNCTIONING; ignore all temperature readings shown on screen
+    
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -1769,7 +1771,7 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1031, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-
+        self.setupInvalidSensors()
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -1789,6 +1791,7 @@ class Ui_MainWindow(object):
         self.label_23.setText(_translate("MainWindow", "Module 2"))
         self.label_24.setText(_translate("MainWindow", "Average"))
 
+    # Display temperature data for module 0
     def _displayMod0Data(self, tempData, tempAverage):
 
         self.mod0_avg.display(tempAverage)
@@ -2120,6 +2123,7 @@ class Ui_MainWindow(object):
             palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
             self.mod0_31.setPalette(palette)
 
+    # Display temperature data for module 1
     def _displayMod1Data(self, tempData, tempAverage):
         self.mod1_avg.display(tempAverage)
         palette = self.mod1_avg.palette()
@@ -2492,6 +2496,7 @@ class Ui_MainWindow(object):
             palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
             self.mod1_31.setPalette(palette)
 
+    # Display temperature data for module 2
     def _displayMod2Data(self, tempData, tempAverage):
         self.mod2_avg.display(tempAverage)
         palette = self.mod2_avg.palette()
@@ -2870,6 +2875,7 @@ class Ui_MainWindow(object):
             palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
             self.mod2_31.setPalette(palette)
 
+    # Display temperature data for module 3
     def _displayMod3Data(self, tempData, tempAverage):
         self.mod3_avg.display(tempAverage)
         palette = self.mod3_avg.palette()
@@ -3196,6 +3202,7 @@ class Ui_MainWindow(object):
             palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
             self.mod3_31.setPalette(palette)
 
+    # Display temperature data for module 4
     def _displayMod4Data(self, tempData, tempAverage):
         self.mod4_avg.display(tempAverage)
         palette = self.mod4_avg.palette()
@@ -3522,6 +3529,7 @@ class Ui_MainWindow(object):
             palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
             self.mod4_31.setPalette(palette)
 
+    # Display temperature data for module 5
     def _displayMod5Data(self, tempData, tempAverage):
         self.mod5_avg.display(tempAverage)
         palette = self.mod5_avg.palette()
@@ -3847,3 +3855,11 @@ class Ui_MainWindow(object):
             palette = self.mod5_31.palette()      
             palette.setColor(palette.Background, Ui_MainWindow.yellowColor)
             self.mod5_31.setPalette(palette)
+
+    # Change color 7-segment display for non-functioning sensors to red
+    def setupInvalidSensors(self):
+        # Testing
+        palette = self.mod0_0.palette()
+        palette.setColor(palette.Background, Ui_MainWindow.redColor)
+        self.mod0_0.setPalette(palette)
+    

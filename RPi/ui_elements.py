@@ -1,3 +1,4 @@
+# 2D array to keep track if a temperature sensor is working -- change value to 'False' if not working
 # If True --> Temperature sensor is working
 # Arranged in the 2D array according to [moduleID][SensorID]
 
