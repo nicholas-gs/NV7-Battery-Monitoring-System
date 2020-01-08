@@ -11,7 +11,7 @@ from threading import Event
 
 from MainWindow_ui import Ui_MainWindow
 from SerialHelper import ComPort
-from ui_elements import ValidTemps
+from ui_elements import TempSensors
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -27,12 +27,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     # Update the UI with the new temperature data
     def updateUI(self, moduleID,  tempData):
-        self.displayData(moduleID, tempData,
-                         self.calculateAvg(moduleID, tempData))
+        # Send array for adjustment
+        self.adjustTemps(moduleID, tempData)
+        # Calculate average temperature for module
+        avg = self.calculateAvg(moduleID, tempData)
+        self.displayData(moduleID, tempData, avg)
 
-    # Update the temperature based on module
+    # Update the temperature based on moduleID -- 0,1,2,4,5,6
     def displayData(self, moduleID, tempData, tempAverage):
-        print(moduleID)
         if(moduleID == 0):
             self._displayMod0Data(tempData, tempAverage)
         elif(moduleID == 1):
@@ -46,6 +48,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         elif(moduleID == 6):
             self._displayMod5Data(tempData, tempAverage)
 
+    # Adjust original temperature reading with the offsets
+    def adjustTemps(self, moduleID, tempData):
+        i = 0
+        for temp in tempData:
+            if(temp != -1):           # Don't do adjustment for temperature if it is -1 (default invalid value)
+                tempData[i] = temp - TempSensors.sensorOffsets[moduleID][i]
+            i += 1
+
     # Calculate the average temp from the array of temperature readings for a single module
     def calculateAvg(self, moduleID, tempData):
         i = 0  # Number of valid temperatures
@@ -53,8 +63,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         sum = 0
 
         for temp in tempData:
-            # Only consider the temperature from a sensor if the sensor is "working" as defined in "validSensors" array
-            if(temp != -1 and ValidTemps.validSensors[moduleID][counter]):
+            if(temp != -1):
                 sum += temp
                 i += 1
             counter += 1
