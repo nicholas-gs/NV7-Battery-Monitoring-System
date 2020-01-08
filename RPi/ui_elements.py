@@ -2,6 +2,10 @@
 # If True --> Temperature sensor is working
 # Arranged in the 2D array according to [moduleID][SensorID]
 
+# IMPORTANT:
+
+# Modules are numbered -- 0,1,2,4,5,6. But can't tell which module ID corresponds to which physical module
+
 
 class ValidTemps:
 
@@ -23,7 +27,7 @@ class ValidTemps:
                     [True, True, True, True, True, True, True, True, True, True,
                      True, True, True, True, True, True, True, True, True, True,
                      True, True, True, True, True, True, True, True, True, True,
-                     True, True],  # Module 3
+                     True, True],  # Module NULL
 
                     [True, True, True, True, True, True, True, True, True, True,
                      True, True, True, True, True, True, True, True, True, True,
@@ -33,5 +37,10 @@ class ValidTemps:
                     [True, True, True, True, True, True, True, True, True, True,
                      True, True, True, True, True, True, True, True, True, True,
                      True, True, True, True, True, True, True, True, True, True,
-                     True, True]  # Module 5
+                     True, True],  # Module 5
+
+                    [True, True, True, True, True, True, True, True, True, True,
+                     True, True, True, True, True, True, True, True, True, True,
+                     True, True, True, True, True, True, True, True, True, True,
+                     True, True]  # Module 6
                     ]

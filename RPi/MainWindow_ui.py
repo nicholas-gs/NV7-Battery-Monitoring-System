@@ -1771,13 +1771,14 @@ class Ui_MainWindow(object):
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1031, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
-        self.setupInvalidSensors()
+        self.setupInvalidSensors()              # Set up invalid sensors as red
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Thermal Monitoring System"))
+        self.showMaximized()
         self.label_29.setText(_translate("MainWindow", "Module 3"))
         self.label_30.setText(_translate("MainWindow", "Average"))
         self.label_25.setText(_translate("MainWindow", "Module 5"))
@@ -3859,7 +3860,8 @@ class Ui_MainWindow(object):
     # Change color 7-segment display for non-functioning sensors to red
     def setupInvalidSensors(self):
         # Testing
-        palette = self.mod0_0.palette()
-        palette.setColor(palette.Background, Ui_MainWindow.redColor)
-        self.mod0_0.setPalette(palette)
+        # palette = self.mod0_0.palette()
+        # palette.setColor(palette.Background, Ui_MainWindow.redColor)
+        # self.mod0_0.setPalette(palette)
+        pass
     

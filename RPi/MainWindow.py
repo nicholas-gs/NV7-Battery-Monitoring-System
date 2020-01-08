@@ -32,17 +32,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     # Update the temperature based on module
     def displayData(self, moduleID, tempData, tempAverage):
+        print(moduleID)
         if(moduleID == 0):
             self._displayMod0Data(tempData, tempAverage)
         elif(moduleID == 1):
             self._displayMod1Data(tempData, tempAverage)
         elif(moduleID == 2):
             self._displayMod2Data(tempData, tempAverage)
-        elif(moduleID == 3):
-            self._displayMod3Data(tempData, tempAverage)
         elif(moduleID == 4):
-            self._displayMod4Data(tempData, tempAverage)
+            self._displayMod3Data(tempData, tempAverage)
         elif(moduleID == 5):
+            self._displayMod4Data(tempData, tempAverage)
+        elif(moduleID == 6):
             self._displayMod5Data(tempData, tempAverage)
 
     # Calculate the average temp from the array of temperature readings for a single module
