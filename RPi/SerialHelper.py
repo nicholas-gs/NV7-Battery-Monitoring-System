@@ -26,10 +26,10 @@ class ComPort(QThread):
             self.ser = None  # Com Port object
             while(self.ser == None):    # Continously try to open COM Port
                 try:
-                    # self.serArduino = serial.Serial(
-                    #    "/dev/ttyUSB0", 9600, timeout = 1)     # Raspberry Pi
                     self.ser = serial.Serial(
-                        "COM5", 9600)                               # PC - Change Com Port as necessary
+                        "/dev/ttyUSB0", 9600, timeout=1)     # Raspberry Pi
+                    # self.ser = serial.Serial(
+                    #    "COM5", 9600)                               # PC - Change Com Port as necessary
                 except:
                     print("Cannot find COM Port")
                     self.statusEvent.emit(
