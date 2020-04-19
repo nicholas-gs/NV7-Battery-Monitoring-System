@@ -14,7 +14,7 @@ void loop() {
 
   Serial.println("00313");
 
-  Serial.println("100233");
+  Serial.println("10033");
 
   Serial.println("10123");
 
